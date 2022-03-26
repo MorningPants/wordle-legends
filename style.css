@@ -20,6 +20,11 @@
   box-sizing: border-box;
   /*   z-index: 1; */
 }
+
+body{
+  height:100%;
+}
+
 #settings {
   height: 5vh;
   margin-right: -9vh;
