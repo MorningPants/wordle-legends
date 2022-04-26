@@ -13426,5 +13426,16 @@ function onClick(event) {
     neutralClick();
   }
 }
+
+const debounce = (func, delay) => {
+  let debounceTimer
+
+  return function () {
+    const context = this
+    clearTimeout(debounceTimer)
+    debounceTimer = setTimeout(() => func(), delay);
+  }
+} 
+
 window.addEventListener("click", onClick);
-window.addEventListener("touchstart", onClick);
+window.addEventListener("touchstart", debouncer(() => onClick, 200));
