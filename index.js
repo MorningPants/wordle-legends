@@ -13438,4 +13438,5 @@ const debounce = (func, delay) => {
 } 
 
 window.addEventListener("click", onClick);
-window.addEventListener("touchstart", debouncer(() => onClick, 200));
+window.addEventListener("touchstart", onClick));
+
