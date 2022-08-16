@@ -1,7 +1,5 @@
-import { answers as _answers, validGuesses as _validGuesses } from "./answers.js";
-
-let answers = _answers;
-let validGuesses = _validGuesses;
+import answers from './answers.json' assert {type: 'json'};
+import validGuesses from './validGuesses.json' assert {type: 'json'};
 
 
 let gameState = 0;
