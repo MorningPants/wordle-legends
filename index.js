@@ -13429,5 +13429,5 @@ function onClick(event) {
 
 
 window.addEventListener("click", onClick);
-window.addEventListener("touchstart", onClick));
+window.addEventListener("touchstart", onClick);
 
