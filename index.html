@@ -1,131 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Wordle Legends</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/3a1bcb50ad.js" crossorigin="anonymous"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Parisienne&family=Russo+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/3a1bcb50ad.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/x-icon" href="favicon.webp" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Parisienne&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
     <script defer type="module" src="index.js"></script>
   </head>
   <body>
-  
-<div class="flexBox">
-  <i class="fa-solid fa-gear" id="settings"></i>
-  <div>
-    <h1>
-      <div class="wordle"> Wordle</div>
-      <div class="cursive">Legends</div>
-    </h1>
-    <p id="info" class="info"></p>
-    <div id="keyboard">
-      <p id="score" class="score">score: 0</p>
-      <div class="keyrow"><span class="keyboardKey_s" id="Q">Q</span><span class="keyboardKey_s" id="W">W</span><span class="keyboardKey_s" id="E">E</span><span class="keyboardKey_s" id="R">R</span><span class="keyboardKey_s" id="T">T</span><span class="keyboardKey_s" id="Y">Y</span><span class="keyboardKey_s" id="U">U</span><span class="keyboardKey_s" id="I">I</span><span class="keyboardKey_s" id="O">O</span><span class="keyboardKey_s" id="P">P</span></div>
-      <div class="keyrow"><span class="keyboardKey_m" id="A">A</span><span class="keyboardKey_m" id="S">S</span><span class="keyboardKey_m" id="D">D</span><span class="keyboardKey_m" id="F">F</span><span class="keyboardKey_m" id="G">G</span><span class="keyboardKey_m" id="H">H</span><span class="keyboardKey_m" id="J">J</span><span class="keyboardKey_m" id="K">K</span><span class="keyboardKey_m" id="L">L</span></div>
-      <div class="keyrow"><span class="keyboardKey_l" id="del">←</span><span class="keyboardKey_s" id="Z">Z</span><span class="keyboardKey_s" id="X">X</span><span class="keyboardKey_s" id="C">C</span><span class="keyboardKey_s" id="V">V</span><span class="keyboardKey_s" id="B">B</span><span class="keyboardKey_s" id="N">N</span><span class="keyboardKey_s" id="M">M</span><span class="keyboardKey_l" id="enter">⇒</span></div>
+    <div class="flexBox">
+      <i class="fa-solid fa-gear" id="settings"></i>
+      <div>
+        <h1>
+          <div class="wordle">Wordle</div>
+          <div class="cursive">Legends</div>
+        </h1>
+        <p id="info" class="info"></p>
+        <div id="keyboard">
+          <p id="score" class="score">score: 0</p>
+          <div class="keyrow">
+            <span class="keyboardKey_s" id="Q">Q</span
+            ><span class="keyboardKey_s" id="W">W</span
+            ><span class="keyboardKey_s" id="E">E</span
+            ><span class="keyboardKey_s" id="R">R</span
+            ><span class="keyboardKey_s" id="T">T</span
+            ><span class="keyboardKey_s" id="Y">Y</span
+            ><span class="keyboardKey_s" id="U">U</span
+            ><span class="keyboardKey_s" id="I">I</span
+            ><span class="keyboardKey_s" id="O">O</span
+            ><span class="keyboardKey_s" id="P">P</span>
+          </div>
+          <div class="keyrow">
+            <span class="keyboardKey_m" id="A">A</span
+            ><span class="keyboardKey_m" id="S">S</span
+            ><span class="keyboardKey_m" id="D">D</span
+            ><span class="keyboardKey_m" id="F">F</span
+            ><span class="keyboardKey_m" id="G">G</span
+            ><span class="keyboardKey_m" id="H">H</span
+            ><span class="keyboardKey_m" id="J">J</span
+            ><span class="keyboardKey_m" id="K">K</span
+            ><span class="keyboardKey_m" id="L">L</span>
+          </div>
+          <div class="keyrow">
+            <span class="keyboardKey_l" id="del">←</span
+            ><span class="keyboardKey_s" id="Z">Z</span
+            ><span class="keyboardKey_s" id="X">X</span
+            ><span class="keyboardKey_s" id="C">C</span
+            ><span class="keyboardKey_s" id="V">V</span
+            ><span class="keyboardKey_s" id="B">B</span
+            ><span class="keyboardKey_s" id="N">N</span
+            ><span class="keyboardKey_s" id="M">M</span
+            ><span class="keyboardKey_l" id="enter">⇒</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <hr class="laser" id="laser" />
+        <div class="gameboard gameboard-background" id="gameboard">
+          <div class="col" id="col0">
+            <div class="bombtile" id="bomb0"></div>
+            <div class="fieldview">
+              <div class="field">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+              </div>
+            </div>
+            <div class="answer tile"></div>
+            <div class="input tile"></div>
+          </div>
+          <div class="col" id="col1">
+            <div class="bombtile" id="bomb1"></div>
+            <div class="fieldview">
+              <div class="field">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+              </div>
+            </div>
+            <div class="answer tile"></div>
+            <div class="input tile"></div>
+          </div>
+          <div class="col" id="col2">
+            <div class="bombtile" id="bomb2"></div>
+            <div class="fieldview">
+              <div class="field">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+              </div>
+            </div>
+            <div class="answer tile"></div>
+            <div class="input tile"></div>
+          </div>
+          <div class="col" id="col3">
+            <div class="bombtile" id="bomb3"></div>
+            <div class="fieldview">
+              <div class="field">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+              </div>
+            </div>
+            <div class="answer tile"></div>
+            <div class="input tile"></div>
+          </div>
+          <div class="col" id="col4">
+            <div class="bombtile" id="bomb4"></div>
+            <div class="fieldview">
+              <div class="field">
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+              </div>
+            </div>
+            <div class="answer tile"></div>
+            <div class="input tile"></div>
+          </div>
+        </div>
+      </div>
+      <div id="gameover" class="gameoverbox">
+        <div class="gameover">Game Over</div>
+        <div class="gameoverscore" id="gameOverScore">score: 0</div>
+        <div class="gameovertext">The word was:</div>
+        <div class="wordreveal" id="wordReveal"></div>
+        <button onclick="reset()">REPLAY</button>
+      </div>
+      <div id="menu" class="menu">
+        <h2>SETTINGS</h2>
+        <br />
+        Mode:
+        <div class="buttons">
+          <button class="menuButton" id="practice">Practice</button>
+          <button class="menuButton active" id="challenge">Challenge</button>
+        </div>
+      </div>
     </div>
-  </div>
-  <div>
-    <hr class="laser" id="laser">
-    <div class="gameboard gameboard-background" id="gameboard">
-      <div class="col" id="col0">
-        <div class="bombtile" id="bomb0"></div>
-        <div class="fieldview">
-          <div class="field">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-          </div>
-        </div>
-        <div class="answer tile"></div>
-        <div class="input tile"></div>
-      </div>
-      <div class="col" id="col1">
-        <div class="bombtile" id="bomb1"></div>
-        <div class="fieldview">
-          <div class="field">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-          </div>
-        </div>
-        <div class="answer tile"></div>
-        <div class="input tile"></div>
-      </div>
-      <div class="col" id="col2">
-        <div class="bombtile" id="bomb2"></div>
-        <div class="fieldview">
-          <div class="field">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-          </div>
-        </div>
-        <div class="answer tile"></div>
-        <div class="input tile"></div>
-      </div>
-      <div class="col" id="col3">
-        <div class="bombtile" id="bomb3"></div>
-        <div class="fieldview">
-          <div class="field">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-          </div>
-        </div>
-        <div class="answer tile"></div>
-        <div class="input tile"></div>
-      </div>
-      <div class="col" id="col4">
-        <div class="bombtile" id="bomb4"></div>
-        <div class="fieldview">
-          <div class="field">
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-            <div class="tile"></div>
-          </div>
-        </div>
-        <div class="answer tile"></div>
-        <div class="input tile"></div>
-      </div>
-    </div>
-  </div>
-  <div id="gameover" class="gameoverbox">
-    <div class="gameover">Game Over</div>
-    <div class="gameoverscore" id="gameOverScore">score: 0</div>
-    <div class="gameovertext">The word was:</div>
-    <div class="wordreveal" id="wordReveal"></div><button onclick="reset()">REPLAY</button>
-  </div>
-  <div id="menu" class="menu">
-    <h2>SETTINGS</h2><br>
-    Mode:<div class="buttons">
-      <button class="menuButton" id="practice">Practice</button>
-      <button class="menuButton active" id="challenge">Challenge</button>
-    </div>
-  </div> 
-   </body>
+  </body>
 </html>
