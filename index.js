@@ -1,7 +1,7 @@
-let module = require("./answers.js")
+import { answers as _answers, validGuesses as _validGuesses } from "./answers.js";
 
-let answers = module.answers;
-let validGuesses = module.validGuesses;
+let answers = _answers;
+let validGuesses = _validGuesses;
 
 
 let gameState = 0;
